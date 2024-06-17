@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+/* 테이블 관련 설정 */
+.tbl_fixed{ table-layout: fixed; }
+.bg_tr{ background: #f4f4f4 !important; }
+.td_input { padding: 3px !important; }
+.td_input .input-sm {
+	height: 28px;
+	padding: 4px 8px;
+}
+.bg_th {
+	background-color: #f4f4f4;
+}
+.data_required::after {
+	content: "*";
+	color: #e53c48; font-size: 13px;
+}
+
+/* 테이블 상단 버튼영역 */
+.ad_tbl_top {
+	height: 30px;
+	margin-bottom: 5px;
+	position: relative;
+	text-align: right;
+}
+.ad_tbl_count {
+	display: table;
+	width: auto; height: 30px;
+	position: absolute; left: 0;
+}
+.ad_tbl_count li {
+	display: table-cell;
+	padding-left: 10px;
+	text-align: left; vertical-align: bottom;
+}
+.ad_tbl_count li:first-child {
+	padding-left: 0;
+}
+.ad_tbl_count li span {
+	margin-right: 3px;
+	font-weight: 600; color: #3c6dbc;
+}
+
+.ad_tbl_toplist * {
+	margin: 2px 0;
+}
+.ad_tbl_toplist .btn i {
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.table-hover > tbody > tr:hover {
+	background-color: #f1f7fb;
+	cursor: default;
+}
+
+/* 테이블 */
+table {
+	border-color: #e8f1f9 !important;
+	border-width: 1px;
+	border-style: solid;
+}
+table th{
+	font-size: 13px; vertical-align: middle; text-align: center;
+	border-color: #e8f1f9 !important;
+	word-wrap: break-word;
+}
+table td{
+	font-size: 12px; vertical-align: middle;
+	word-wrap: break-word;
+	border-color: #e8f1f9 !important;
+}
+caption {
+	display: none;
+}
+
+.table {
+	margin-bottom: 0;
+	background-color: #fff;
+}
+.tbl_col td{
+	text-align: center;
+}
+.tbl_col thead th {
+	border-color: #fff !important;
+	background-color: #e8f1f9;
+}
+.tbl_row tbody tr th {
+	background-color: #e8f1f9;
+}
+
+.tbl_row_c tbody td {
+	text-align: center;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	vertical-align: middle;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+	background: #f1f6fa;
+}
+
+/* table style - 기본 세로형 리스트 스타일 thead row 2줄이상 */
+.ad_multirow_list_tbl {
+	width: 100%;
+	position: relative;
+}
+.ad_multirow_list_tbl thead th {
+	text-align: center;
+	border-left: 1px solid #ddd;
+}
+.ad_multirow_list_tbl tbody th{
+	text-align: center;
+}
+.ad_multirow_list_tbl tbody td {
+	text-align: center;
+	border-left: 1px solid #ddd;
+}
+
+.table-responsive > .table > thead > tr > th, .table-responsive > .table > tbody > tr > th, .table-responsive > .table > tfoot > tr > th, .table-responsive > .table > thead > tr > td, .table-responsive > .table > tbody > tr > td, .table-responsive > .table > tfoot > tr > td {
+	white-space: normal;
+}
+
+/* 스크롤 테이블 */
+.tbl_scroll .table {
+	min-width: 1000px;
+}
+.tbl_scroll_xl .table {
+	min-width: 1400px;
+}
+.tbl_scroll_lg .table {
+	min-width: 1200px;
+}
+.tbl_scroll_md .table {
+	min-width: 800px;
+}
+.tbl_scroll_sm .table {
+	min-width: 600px;
+}
+.tbl_scroll_xs .table {
+	min-width: 400px;
+}
+
+/* data table */
+div.dataTables_wrapper div.dataTables_processing {
+	/* 처리중 박스 */
+	z-index: 1;
+	color: #40b8ea; font-weight: 600;
+	border-width: 2px; border-color: #40b8ea; 
+}
+.dataTables_scrollBody thead th {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+table.dataTable tbody td.select-radio,table.dataTable tbody th.select-radio{position:relative}table.dataTable tbody td.select-radio:before,table.dataTable tbody td.select-radio:after,table.dataTable tbody th.select-radio:before,table.dataTable tbody th.select-radio:after{display:block;position:absolute;top:1.2em;left:50%;width:12px;height:12px;box-sizing:border-box}table.dataTable tbody td.select-radio:before,table.dataTable tbody th.select-radio:before{content:' ';margin-top:-6px;margin-left:-6px;border:1px solid black;border-radius:6px}table.dataTable tr.selected td.select-radio:after,table.dataTable tr.selected th.select-radio:after{content:'\2714';margin-top:-11px;margin-left:-4px;text-align:center;text-shadow:1px 1px #B0BED9, -1px -1px #B0BED9, 1px -1px #B0BED9, -1px 1px #B0BED9}
+
+@media all and (max-width:767px){
+	
+	.ad_tbl_top {
+		height: auto;
+		text-align: left;
+	}
+	.ad_tbl_count {
+		display: block;
+		width: 100%; height: auto;
+		margin-bottom: 3px;
+		position: relative;
+	}
+	.ad_tbl_count li {
+		display: inline-block;
+	}
+	.ad_tbl_toplist {
+		padding: 5px;
+		text-align: right;
+	}
+	
+	/* data table */
+	.dataTables_wrapper  > .row > div{
+		text-align: right !important;
+	}
+	div.dataTables_length {
+		display: inline-block;
+	}
+	.dataTables_info {
+		display: inline-block;
+	}
+	.dt-buttons {
+		margin-top: 10px;
+	}
+	
+}
+

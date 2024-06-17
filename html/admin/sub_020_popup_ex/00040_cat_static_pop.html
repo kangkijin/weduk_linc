@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi shrink-to-fit=no">
+		<meta name="format-detection" content="telephone=no, address=no">
+		<meta name="title" content="위덕대학교 LINC3.0">
+		<meta name="description" content="위덕대학교 LINC3.0">
+		<meta name="copyright" content="위덕대학교 LINC3.0">
+		<meta name="keywords" content="위덕대학교 LINC3.0">
+		<title>위덕대학교 LINC3.0</title>
+		
+		<!-- favicon -->
+		<link rel="apple-touch-icon" href="../../../images/favicon.png">
+		<link rel="shortcut icon" href="../../../images/favicon.ico">
+		<!-- //favicon -->
+		
+		<!-- [pp] icon -->
+		<link rel="stylesheet" href="../../../src/font-awesome/css/font-awesome.min.css">
+		<!-- [pp] font-awesome 파이어폭스 미출력 에러 대응 -->
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+		<!-- [pp] //font-awesome 파이어폭스 미출력 에러 대응 -->
+		<link rel="stylesheet" href="../../../src/remixicon/fonts/remixicon.css">
+		<!-- [pp] //icon -->
+		
+		<!-- css -->
+		<link rel="stylesheet" href="../../../src/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../../src/bootstrap-adminLTE/css/AdminLTE.css">
+		<link rel="stylesheet" href="../../../src/bootstrap-adminLTE/css/_all-skins.min.css">
+		<link rel="stylesheet" href="../../../src/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
+		<link rel="stylesheet" href="../../../src/dataTables/css/dataTables.bootstrap.min.css">
+		<link rel="stylesheet" href="../../../src/dataTables/css/select.dataTables.min.css">
+		<link rel="stylesheet" href="../../../src/mCustomScrollbar/css/jquery.mCustomScrollbar.min.css">
+		<link rel="stylesheet" href="../../../src/select2/css/select2.css">
+		<link rel="stylesheet" href="../../../src/apexchart/css/apexcharts.css">
+		<link rel="stylesheet" href="../../../css/dl_global.css">
+		<link rel="stylesheet" href="../../../css/admin/dl_common.css">
+		<link rel="stylesheet" href="../../../css/admin/dl_custom.css">
+		<link rel="stylesheet" href="../../../css/admin/dl_table.css">
+		<link rel="stylesheet" href="../../../css/admin/dl_ui.css">
+		<link rel="stylesheet" href="../../../css/admin/dl_popup.css">
+		<!-- //css -->
+
+		<!-- js -->
+		<script src="../../../src/jquery/js/jquery-3.5.1.min.js"></script>
+		<!--[if lt IE 9]>
+		<script src="../../../src/jquery/js/jquery-1.12.3.min.js"></script>
+		<script src="../../../src/jquery/js/html5shiv.js"></script>
+		<script src="../../../src/jquery/js/IE9.js"></script>
+		<script src="../../../src/jquery/js/respond.min.js"></script>
+		<![endif]-->
+		<script src="../../../src/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../../../src/bootstrap-adminLTE/js/adminlte.js"></script>
+		<script src="../../../src/bootstrap-adminLTE/js/demo.js"></script>
+		<script src="../../../src/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+		<script src="../../../src/dataTables/js/jquery.dataTables.min.js"></script>
+		<script src="../../../src/dataTables/js/dataTables.bootstrap.min.js"></script>
+		<script src="../../../src/dataTables/js/dataTables.buttons.min.js"></script>
+		<script src="../../../src/dataTables/js/dataTables.select.min.js"></script>
+		<script src="../../../src/dataTables/js/jszip.min.js"></script>
+		<script src="../../../src/dataTables/js/pdfmake.min.js"></script>
+		<script src="../../../src/mCustomScrollbar/js/jquery.mCustomScrollbar.min.js"></script>
+		<script src="../../../src/select2/js/select2.min.js"></script>
+		<script src="../../../src/apexchart/js/apexcharts.js"></script>
+		<script src="../../../js/admin/pp_ui.js"></script>
+		<!-- //js -->
+	</head>
+
+	<body class="hold-transition skin-red sidebar-mini">
+		<!--[pp] 모달기본 -->
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">C.A.T 대학생활적응진단</h4>
+				</div>
+				<div class="modal-body">
+					<div class="dp_inlinefix">
+						<ul class="ad_showtab">
+							<li>
+								<a href="#showbox1" onclick="return false" class="on">1차</a>
+							</li>
+							<li>
+								<a href="#showbox2" onclick="return false">2차</a>
+							</li>
+						</ul>
+						<section id="showbox1" class="ad_catresult_wrap">
+							<h2 class="box-title">대학적응력 종합평가</h2>
+							<!-- [pp] T점수 td값 갖고와서 그래프 p태그에 클래스명으로 넓이 넣어주는 함수 graphWidth(); -->
+							<div class="ad_list_table_wrap table-responsive tbl_scroll_md">
+								<table class="table table-bordered tbl_col ad_graph_tbl">
+									<caption>대학적응력 종합평가 항목별 막대그래프</caption>
+									<colgroup>
+										<col style="width: 15%">
+										<col style="width: auto">
+										<col style="width: 8%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">요인</th>
+											<th scope="col"></th>
+											<th scope="col">T점수</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">대학생활 적응력</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_orange"></p>
+												</div>
+											</td>
+											<td class="t_grade">35</td>
+										</tr>
+										<tr>
+											<th scope="row">학문적 통합성</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_green"></p>
+												</div>
+											</td>
+											<td class="t_grade">38</td>
+										</tr>
+										<tr>
+											<th scope="row">사회적 통합성</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_green"></p>
+												</div>
+											</td>
+											<td class="t_grade">38</td>
+										</tr>
+										<tr>
+											<th scope="row">정서적 안정성</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_green"></p>
+												</div>
+											</td>
+											<td class="t_grade">55</td>
+										</tr>
+										<tr>
+											<th scope="row">진로 정체성</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_green"></p>
+												</div>
+											</td>
+											<td class="t_grade">49</td>
+										</tr>
+										<tr>
+											<th scope="row">대학교육만족도</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_yellow"></p>
+												</div>
+											</td>
+											<td class="t_grade">32</td>
+										</tr>
+										<tr>
+											<th scope="row">교육서비스 만족도</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_yellow"></p>
+												</div>
+											</td>
+											<td class="t_grade">27</td>
+										</tr>
+										<tr>
+											<th scope="row">교수와의 관계</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_yellow"></p>
+												</div>
+											</td>
+											<td class="t_grade">39</td>
+										</tr>
+										<tr>
+											<th scope="row">경제적 안정성</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_deepblue"></p>
+												</div>
+											</td>
+											<td class="t_grade">56</td>
+										</tr>
+										<tr>
+											<th scope="row">가정의 정서적 지지</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_deepblue"></p>
+												</div>
+											</td>
+											<td class="t_grade">26</td>
+										</tr>
+										<tr>
+											<th scope="row">학업지속 어려움</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_deepblue"></p>
+												</div>
+											</td>
+											<td class="t_grade">52</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<p class="ad_result_txt">
+								대학생활적응력이 평균적인 수준보다 낮은 편이고, 개인 및 대학 특성의 영향에 따라 학업중단의 가능성이 다소 높습니다.
+
+								특히 낮은 점수를 보인 교수와의 관계, 교육서비스 만족도, 대학교육만족도, 사회적통합성, 학문적통합성 요인으로 인하여 학업중단 가능성과 대학생활 부적응을 겪을 수 있습니다.
+								따라서, 학업중단 가능성과 부적응에 영향을 미치는 낮은 점수의 교수와의 관계, 교육서비스 만족도, 대학교육만족도, 사회적통합성, 학문적통합성 요인에 대한 문제 해결을 지원하고 학업 중단을 예방하기 위한 노력이 요구됩니다.
+
+								정서적안정성 요인은 학업을 지속하고 대학생활에 적응하는데 강점으로 작용할 수 있습니다.
+							</p>
+							<ul class="ad_showtab">
+								<li>
+									<a href="#showbox1_1" onclick="return false" class="on">학생특성</a>
+								</li>
+								<li>
+									<a href="#showbox1_2" onclick="return false">대학특성</a>
+								</li>
+								<li>
+									<a href="#showbox1_3" onclick="return false">학업여건 안정성</a>
+								</li>
+							</ul>
+							<section id="showbox1_1">
+								<div class="ad_section_wrap">
+									<h2 class="box-title">종합</h2>
+									<div class="ad_list_table_wrap">
+										<table class="table table-bordered tbl_col ad_graph_tbl">
+											<caption>학생특성 종합결과</caption>
+											<colgroup>
+												<col style="width: 25%">
+												<col style="width: 25%">
+												<col style="width: 25%">
+												<col style="width: 25%">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">원점수</th>
+													<th scope="col">T점수</th>
+													<th scope="col">백분위</th>
+													<th scope="col">집단</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>65</td>
+													<td>45</td>
+													<td>30</td>
+													<td>고위험군</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div>
+									<h2 class="box-title">하위요인별 점수</h2>
+									<div class="ad_list_table_wrap table-responsive tbl_scroll_md">
+										<table class="table table-bordered tbl_col ad_graph_tbl">
+											<caption>학생특성 하위요인별 점수 그래프</caption>
+											<colgroup>
+												<col style="width: 15%">
+												<col style="width: 8%">
+												<col style="width: auto">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">하위요인</th>
+													<th scope="col">T점수</th>
+													<th scope="col" class="pd_0">
+														<ul class="ad_graph_tit">
+															<li class="wd_p45">고위험군</li>
+															<li class="wd_p10">잠재위험군</li>
+															<li class="wd_p45">성공역량군</li>
+														</ul>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">학문적 통합성</th>
+													<td class="t_grade">38</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_lightred wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사회적 통합성</th>
+													<td class="t_grade">38</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">정서적 안정성</th>
+													<td class="t_grade">55</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">진로 정체성</th>
+													<td class="t_grade">49</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<p class="ad_result_txt mg_b0">
+										학업 수행, 진로정체성, 사회성 및 정서 등 측면에서 대학생활에 적응하는데 어려움이 있으며, 학생 특성 요인에 따라 학업중단의 가능성이 다소 높습니다. 학생특성의 하위척도별 지수를 확인하고 학업중단 가능성과 부적응에 영향을 미치는 지수가 낮은 하위척도에 해당하는 학생 특성의 원인을 분석함으로써, 문제 해결을 지원하고 학업 중단을 예방하기 위한 노력이 요구됩니다.
+									</p>
+								</div>
+							</section>
+							<section id="showbox1_2">
+								<div class="ad_section_wrap">
+									<h2 class="box-title">종합</h2>
+									<div class="ad_list_table_wrap">
+										<table class="table table-bordered tbl_col ad_graph_tbl">
+											<caption>대학특성 종합결과</caption>
+											<colgroup>
+												<col style="width: 25%">
+												<col style="width: 25%">
+												<col style="width: 25%">
+												<col style="width: 25%">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">원점수</th>
+													<th scope="col">T점수</th>
+													<th scope="col">백분위</th>
+													<th scope="col">집단</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>65</td>
+													<td>45</td>
+													<td>30</td>
+													<td>고위험군</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div>
+									<h2 class="box-title">하위요인별 점수</h2>
+									<div class="ad_list_table_wrap table-responsive tbl_scroll_md">
+										<table class="table table-bordered tbl_col ad_graph_tbl">
+											<caption>대학특성 하위요인별 점수 그래프</caption>
+											<colgroup>
+												<col style="width: 15%">
+												<col style="width: 8%">
+												<col style="width: auto">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">하위요인</th>
+													<th scope="col">T점수</th>
+													<th scope="col" class="pd_0">
+														<ul class="ad_graph_tit">
+															<li class="wd_p45">고위험군</li>
+															<li class="wd_p10">잠재위험군</li>
+															<li class="wd_p45">성공역량군</li>
+														</ul>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">대학교육 만족도</th>
+													<td class="t_grade">38</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">교육서비스 만족도</th>
+													<td class="t_grade">38</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">교수와의 관계</th>
+													<td class="t_grade">55</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<p class="ad_result_txt mg_b0">
+										학업 수행, 진로정체성, 사회성 및 정서 등 측면에서 대학생활에 적응하는데 어려움이 있으며, 학생 특성 요인에 따라 학업중단의 가능성이 다소 높습니다. 학생특성의 하위척도별 지수를 확인하고 학업중단 가능성과 부적응에 영향을 미치는 지수가 낮은 하위척도에 해당하는 학생 특성의 원인을 분석함으로써, 문제 해결을 지원하고 학업 중단을 예방하기 위한 노력이 요구됩니다.
+									</p>
+								</div>
+							</section>
+							<section id="showbox1_3">
+								<div class="ad_section_wrap">
+									<h2 class="box-title">종합</h2>
+									<div class="ad_list_table_wrap">
+										<table class="table table-bordered tbl_col ad_graph_tbl">
+											<caption>학업여건 안전성 종합결과</caption>
+											<colgroup>
+												<col style="width: 25%">
+												<col style="width: 25%">
+												<col style="width: 25%">
+												<col style="width: 25%">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">원점수</th>
+													<th scope="col">T점수</th>
+													<th scope="col">백분위</th>
+													<th scope="col">집단</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>65</td>
+													<td>45</td>
+													<td>30</td>
+													<td>고위험군</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div>
+									<h2 class="box-title">하위요인별 점수</h2>
+									<div class="ad_list_table_wrap table-responsive tbl_scroll_md">
+										<table class="table table-bordered tbl_col ad_graph_tbl">
+											<caption>학업여건 안전성 하위요인별 점수 그래프</caption>
+											<colgroup>
+												<col style="width: 15%">
+												<col style="width: 8%">
+												<col style="width: auto">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">하위요인</th>
+													<th scope="col">T점수</th>
+													<th scope="col" class="pd_0">
+														<ul class="ad_graph_tit">
+															<li class="wd_p45">고위험군</li>
+															<li class="wd_p10">잠재위험군</li>
+															<li class="wd_p45">성공역량군</li>
+														</ul>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">경제적 안정성</th>
+													<td class="t_grade">38</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">가정의 정서적 지지</th>
+													<td class="t_grade">38</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">학업지속 안정성</th>
+													<td class="t_grade">55</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<p class="ad_result_txt mg_b0">
+										학업 수행, 진로정체성, 사회성 및 정서 등 측면에서 대학생활에 적응하는데 어려움이 있으며, 학생 특성 요인에 따라 학업중단의 가능성이 다소 높습니다. 학생특성의 하위척도별 지수를 확인하고 학업중단 가능성과 부적응에 영향을 미치는 지수가 낮은 하위척도에 해당하는 학생 특성의 원인을 분석함으로써, 문제 해결을 지원하고 학업 중단을 예방하기 위한 노력이 요구됩니다.
+									</p>
+								</div>
+							</section>
+						</section>
+						<section id="showbox2" class="ad_catresult_wrap">
+							<h2 class="box-title">대학적응력 종합평가</h2>
+							<!-- [pp] T점수 td값 갖고와서 그래프 p태그에 클래스명으로 넓이 넣어주는 함수 graphWidth(); -->
+							<div class="ad_list_table_wrap table-responsive tbl_scroll_md">
+								<table class="table table-bordered tbl_col ad_graph_tbl">
+									<caption>대학적응력 종합평가 항목별 막대그래프</caption>
+									<colgroup>
+										<col style="width: 15%">
+										<col style="width: auto">
+										<col style="width: 8%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">요인</th>
+											<th scope="col"></th>
+											<th scope="col">T점수</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">대학생활 적응력</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_orange"></p>
+												</div>
+											</td>
+											<td class="t_grade">35</td>
+										</tr>
+										<tr>
+											<th scope="row">학문적 통합성</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_green"></p>
+												</div>
+											</td>
+											<td class="t_grade">38</td>
+										</tr>
+										<tr>
+											<th scope="row">사회적 통합성</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_green"></p>
+												</div>
+											</td>
+											<td class="t_grade">38</td>
+										</tr>
+										<tr>
+											<th scope="row">정서적 안정성</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_green"></p>
+												</div>
+											</td>
+											<td class="t_grade">55</td>
+										</tr>
+										<tr>
+											<th scope="row">진로 정체성</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_green"></p>
+												</div>
+											</td>
+											<td class="t_grade">49</td>
+										</tr>
+										<tr>
+											<th scope="row">대학교육만족도</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_yellow"></p>
+												</div>
+											</td>
+											<td class="t_grade">32</td>
+										</tr>
+										<tr>
+											<th scope="row">교육서비스 만족도</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_yellow"></p>
+												</div>
+											</td>
+											<td class="t_grade">27</td>
+										</tr>
+										<tr>
+											<th scope="row">교수와의 관계</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_yellow"></p>
+												</div>
+											</td>
+											<td class="t_grade">39</td>
+										</tr>
+										<tr>
+											<th scope="row">경제적 안정성</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_deepblue"></p>
+												</div>
+											</td>
+											<td class="t_grade">56</td>
+										</tr>
+										<tr>
+											<th scope="row">가정의 정서적 지지</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_deepblue"></p>
+												</div>
+											</td>
+											<td class="t_grade">26</td>
+										</tr>
+										<tr>
+											<th scope="row">학업지속 어려움</th>
+											<td class="pd_5">
+												<div class="ad_graphbar_wrap">
+													<ul>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+														<li></li>
+													</ul>
+													<p class="graph_bar bg_deepblue"></p>
+												</div>
+											</td>
+											<td class="t_grade">52</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<p class="ad_result_txt">
+								대학생활적응력이 평균적인 수준보다 낮은 편이고, 개인 및 대학 특성의 영향에 따라 학업중단의 가능성이 다소 높습니다.
+
+								특히 낮은 점수를 보인 교수와의 관계, 교육서비스 만족도, 대학교육만족도, 사회적통합성, 학문적통합성 요인으로 인하여 학업중단 가능성과 대학생활 부적응을 겪을 수 있습니다.
+								따라서, 학업중단 가능성과 부적응에 영향을 미치는 낮은 점수의 교수와의 관계, 교육서비스 만족도, 대학교육만족도, 사회적통합성, 학문적통합성 요인에 대한 문제 해결을 지원하고 학업 중단을 예방하기 위한 노력이 요구됩니다.
+
+								정서적안정성 요인은 학업을 지속하고 대학생활에 적응하는데 강점으로 작용할 수 있습니다.
+							</p>
+							<ul class="ad_showtab">
+								<li>
+									<a href="#showbox2_1" onclick="return false" class="on">학생특성</a>
+								</li>
+								<li>
+									<a href="#showbox2_2" onclick="return false">대학특성</a>
+								</li>
+								<li>
+									<a href="#showbox2_3" onclick="return false">학업여건 안정성</a>
+								</li>
+							</ul>
+							<section id="showbox2_1">
+								<div class="ad_section_wrap">
+									<h2 class="box-title">종합</h2>
+									<div class="ad_list_table_wrap">
+										<table class="table table-bordered tbl_col ad_graph_tbl">
+											<caption>학생특성 종합결과</caption>
+											<colgroup>
+												<col style="width: 25%">
+												<col style="width: 25%">
+												<col style="width: 25%">
+												<col style="width: 25%">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">원점수</th>
+													<th scope="col">T점수</th>
+													<th scope="col">백분위</th>
+													<th scope="col">집단</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>65</td>
+													<td>45</td>
+													<td>30</td>
+													<td>고위험군</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div>
+									<h2 class="box-title">하위요인별 점수</h2>
+									<div class="ad_list_table_wrap table-responsive tbl_scroll_md">
+										<table class="table table-bordered tbl_col ad_graph_tbl">
+											<caption>학생특성 하위요인별 점수 그래프</caption>
+											<colgroup>
+												<col style="width: 15%">
+												<col style="width: 8%">
+												<col style="width: auto">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">하위요인</th>
+													<th scope="col">T점수</th>
+													<th scope="col" class="pd_0">
+														<ul class="ad_graph_tit">
+															<li class="wd_p45">고위험군</li>
+															<li class="wd_p10">잠재위험군</li>
+															<li class="wd_p45">성공역량군</li>
+														</ul>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">학문적 통합성</th>
+													<td class="t_grade">38</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_lightred wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">사회적 통합성</th>
+													<td class="t_grade">38</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">정서적 안정성</th>
+													<td class="t_grade">55</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">진로 정체성</th>
+													<td class="t_grade">49</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<p class="ad_result_txt mg_b0">
+										학업 수행, 진로정체성, 사회성 및 정서 등 측면에서 대학생활에 적응하는데 어려움이 있으며, 학생 특성 요인에 따라 학업중단의 가능성이 다소 높습니다. 학생특성의 하위척도별 지수를 확인하고 학업중단 가능성과 부적응에 영향을 미치는 지수가 낮은 하위척도에 해당하는 학생 특성의 원인을 분석함으로써, 문제 해결을 지원하고 학업 중단을 예방하기 위한 노력이 요구됩니다.
+									</p>
+								</div>
+							</section>
+							<section id="showbox2_2">
+								<div class="ad_section_wrap">
+									<h2 class="box-title">종합</h2>
+									<div class="ad_list_table_wrap">
+										<table class="table table-bordered tbl_col ad_graph_tbl">
+											<caption>대학특성 종합결과</caption>
+											<colgroup>
+												<col style="width: 25%">
+												<col style="width: 25%">
+												<col style="width: 25%">
+												<col style="width: 25%">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">원점수</th>
+													<th scope="col">T점수</th>
+													<th scope="col">백분위</th>
+													<th scope="col">집단</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>65</td>
+													<td>45</td>
+													<td>30</td>
+													<td>고위험군</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div>
+									<h2 class="box-title">하위요인별 점수</h2>
+									<div class="ad_list_table_wrap table-responsive tbl_scroll_md">
+										<table class="table table-bordered tbl_col ad_graph_tbl">
+											<caption>대학특성 하위요인별 점수 그래프</caption>
+											<colgroup>
+												<col style="width: 15%">
+												<col style="width: 8%">
+												<col style="width: auto">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">하위요인</th>
+													<th scope="col">T점수</th>
+													<th scope="col" class="pd_0">
+														<ul class="ad_graph_tit">
+															<li class="wd_p45">고위험군</li>
+															<li class="wd_p10">잠재위험군</li>
+															<li class="wd_p45">성공역량군</li>
+														</ul>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">대학교육 만족도</th>
+													<td class="t_grade">38</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">교육서비스 만족도</th>
+													<td class="t_grade">38</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">교수와의 관계</th>
+													<td class="t_grade">55</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<p class="ad_result_txt mg_b0">
+										학업 수행, 진로정체성, 사회성 및 정서 등 측면에서 대학생활에 적응하는데 어려움이 있으며, 학생 특성 요인에 따라 학업중단의 가능성이 다소 높습니다. 학생특성의 하위척도별 지수를 확인하고 학업중단 가능성과 부적응에 영향을 미치는 지수가 낮은 하위척도에 해당하는 학생 특성의 원인을 분석함으로써, 문제 해결을 지원하고 학업 중단을 예방하기 위한 노력이 요구됩니다.
+									</p>
+								</div>
+							</section>
+							<section id="showbox2_3">
+								<div class="ad_section_wrap">
+									<h2 class="box-title">종합</h2>
+									<div class="ad_list_table_wrap">
+										<table class="table table-bordered tbl_col ad_graph_tbl">
+											<caption>학업여건 안전성 종합결과</caption>
+											<colgroup>
+												<col style="width: 25%">
+												<col style="width: 25%">
+												<col style="width: 25%">
+												<col style="width: 25%">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">원점수</th>
+													<th scope="col">T점수</th>
+													<th scope="col">백분위</th>
+													<th scope="col">집단</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>65</td>
+													<td>45</td>
+													<td>30</td>
+													<td>고위험군</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div>
+									<h2 class="box-title">하위요인별 점수</h2>
+									<div class="ad_list_table_wrap table-responsive tbl_scroll_md">
+										<table class="table table-bordered tbl_col ad_graph_tbl">
+											<caption>학업여건 안전성 하위요인별 점수 그래프</caption>
+											<colgroup>
+												<col style="width: 15%">
+												<col style="width: 8%">
+												<col style="width: auto">
+											</colgroup>
+											<thead>
+												<tr>
+													<th scope="col">하위요인</th>
+													<th scope="col">T점수</th>
+													<th scope="col" class="pd_0">
+														<ul class="ad_graph_tit">
+															<li class="wd_p45">고위험군</li>
+															<li class="wd_p10">잠재위험군</li>
+															<li class="wd_p45">성공역량군</li>
+														</ul>
+													</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">경제적 안정성</th>
+													<td class="t_grade">38</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">가정의 정서적 지지</th>
+													<td class="t_grade">38</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">학업지속 안정성</th>
+													<td class="t_grade">55</td>
+													<td class="pd_0">
+														<div class="ad_graphbar_wrap ad_graphbar_wrap2">
+															<ul>
+																<li class="bg_red wd_p45"></li>
+																<li class="bg_yellow wd_p9"></li>
+																<li class="bg_green wd_p46"></li>
+															</ul>
+															<p class="graph_bar bg_deepblue"></p>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<p class="ad_result_txt mg_b0">
+										학업 수행, 진로정체성, 사회성 및 정서 등 측면에서 대학생활에 적응하는데 어려움이 있으며, 학생 특성 요인에 따라 학업중단의 가능성이 다소 높습니다. 학생특성의 하위척도별 지수를 확인하고 학업중단 가능성과 부적응에 영향을 미치는 지수가 낮은 하위척도에 해당하는 학생 특성의 원인을 분석함으로써, 문제 해결을 지원하고 학업 중단을 예방하기 위한 노력이 요구됩니다.
+									</p>
+								</div>
+							</section>
+						</section>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--[pp] 모달기본 -->
+	</body>
+
+</html>

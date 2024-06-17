@@ -1,0 +1,376 @@
+@charset "utf-8";
+
+/* fonts */
+@font-face {
+	font-family: 'NanumMyeongjo';
+	font-style: normal;
+	src: url('../../fonts/NanumMyeongjo-Regular.eot');
+	src: url('../../fonts/NanumMyeongjo-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../../fonts/NanumMyeongjo-Regular.woff2') format('woff2'),
+		url('../../fonts/NanumMyeongjo-Regular.woff') format('woff'),
+		url('../../fonts/NanumMyeongjo-Regular.ttf') format('truetype');
+}
+
+@media print {
+	@page {
+		size: portrait;
+		/*margin: 1cm;*/
+		width: 21cm; height: 29.7cm;
+	}
+	* {
+		/* 배경그래픽 표시 */
+		-webkit-print-color-adjust: exact;
+		print-color-adjust: exact;
+	}
+	body {
+		position: relative;
+	}
+	div.print_banner {
+		display: none;
+	}
+	div.page { 
+		width: initial; min-height: initial; height: auto;
+		margin: 0; padding: 0;
+		box-shadow: initial; background: initial; border: none;
+	}
+	img.bg_print {
+		position: fixed; top: 50%;
+	}
+	div.page_wrapper {
+		min-height: inherit;
+	}
+	
+	/* apexchart 테두리 제거 */
+	.apexcharts-canvas .apexcharts-grid line {
+		display: none;
+	}
+}
+
+/* reset */
+* {
+	margin: 0; padding: 0;
+	line-height: 150%;
+	font-weight: normal;
+	word-break: keep-all;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+img, button {
+	outline: 0;
+	border: 0;
+}
+table {
+	word-break: break-all;
+	border-collapse: separate; border-spacing: 0px; 
+	table-layout: fixed; 
+	page-break-inside: auto;
+}
+table caption {
+	height:0; 
+	font-size:0; text-indent:-9999px;
+}
+tr {
+	page-break-inside: avoid; page-break-after: auto;
+}
+thead {
+	display: table-header-group;
+}
+tfoot {
+	display: table-footer-group;
+}
+ul li {
+	list-style: none;
+}
+
+/* border style */
+.bo_top { border-top: 1px solid #666 !important; }
+.bo_bottom { border-bottom: 1px solid #666 !important; }
+.bo_left { border-left: 1px solid #666 !important; }
+.bo_right { border-right: 1px solid #666 !important; }
+.bo_top_none { border-top: none !important; }
+.bo_bottom_none { border-bottom: none !important; }
+.bo_left_none { border-left: none !important; }
+.bo_right_none { border-right: none !important; }
+.ta_c { text-align: center !important; }
+.ta_l { text-align: left !important; }
+.ta_r { text-align: right !important; }
+
+/* layout */
+.print_banner {
+	position: relative;
+	margin-bottom: 60px;
+	width: 100%; height: 50px;
+	background: #f2f2f2;
+}
+.print_banner .btn_print {
+	position: absolute; top: 50%; right: 10px;
+	display: inline-block;
+	padding: 0 16px;
+	color: #fff; font-size: 15px; line-height: 35px;
+	background-color: #004483;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.page {
+	position: relative;
+	margin: 0cm auto 60px; padding: 1cm;
+	width: 21cm; min-height: 29.7cm;
+	background: #fff;
+	border: 1px solid #3a3a3a;
+}
+
+.bg_print {
+	position: absolute; top: 14.85cm; left: 50%;
+	width: 500px; height: auto;
+	opacity: 0.5;
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+}
+.page_wrapper {
+	position: relative;
+	padding: 1cm; 
+	min-height: 27.7cm; 
+	font-family: 'NanumMyeongjo', sans-serif; font-size: 17px; 
+}
+.print_title {
+	margin-bottom: 80px;
+	text-align: center;
+}
+.print_title h1 {
+	padding-top: 0.5cm;
+	font-size: 28px; font-weight: 600;
+	line-height: 1.5em; letter-spacing: 4px; 
+}
+.print_title p {
+	position: absolute; top: 0; left: 0;
+	font-size: 15px;
+}
+.print_profile {
+	margin-left: 60%; margin-bottom: 60px;
+}
+.print_profile table {
+	width: 100%; 
+}
+.print_profile table th, .print_profile table td {
+	padding: 2px 0;
+	text-align: left; 
+}
+.print_profile .th_blank {
+	padding: 0 16px;
+}
+.print_contents {
+	margin-bottom: 20px;
+	/* min-height: 400px; */
+	min-height: 340px;
+	text-align: justify; word-break: keep-all;
+}
+.print_contents p {
+	margin-bottom: 30px;
+	text-indent: 20px; line-height: 1.7em; 
+}
+.print_contents table {
+	width: 100%;
+	text-align: center;
+	background: #fff;
+	table-layout: fixed;
+}
+.print_contents th, .print_contents td {
+	padding: 6px;
+	font-size: 14px;
+}
+.print_contents th:nth-child(1) {
+	border-left: 1px solid #666;
+}
+.print_contents thead tr th {
+	border-bottom: 1px solid #666;
+	border-right: 1px solid #666;
+}
+.print_contents thead tr:first-child th {
+	border-top: 1px solid #888;
+}
+.print_contents tbody th, .print_contents tfoot th {
+	border-bottom: 1px solid #666;
+	border-right: 1px solid #666;
+}
+.print_contents tbody td, .print_contents tfoot td {
+	border-bottom: 1px solid #666;
+	border-right: 1px solid #666;
+}
+.print_footer {
+	margin-top: 40px;
+	width: 100%;
+}
+.print_day_title {
+	width: 100%;
+	margin-bottom: 20px;
+	text-align: center;
+}
+.print_day_title > p:first-child {
+	display: block;
+	margin-bottom: 10px;
+}
+.print_day_title p {
+	display: inline-block;
+}
+.print_day_title p span {
+	padding: 0 16px;
+}
+.print_day_title div p:first-child span {
+	padding-left: 0;
+}
+.print_stamp {
+	padding-top: 20px;
+	text-align: center; 
+}
+.print_stamp p {
+	position: relative; 
+	display: inline-block;
+}
+.print_stamp strong {
+	position: relative; z-index: 10;
+	display: inline-block;
+	font-size: 25px; font-weight: 600; letter-spacing: 4px;
+}
+.print_stamp img {
+	position: absolute; top: 50%; right: -60px;
+	display: inline-block;
+	width: 85px; height: auto;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.print_stamp small {
+	display: block;
+	margin-top: 40px;
+	color: #999;
+}
+.print_stamp .send_to {
+	display: block;
+	margin-top: 40px;
+	font-size: 19px; font-weight: 600; letter-spacing: 4px;
+}
+
+/* 인증서 */
+.page_certi .print_profile {
+	margin-bottom: 140px;
+}
+.page_certi .print_title h1 {
+	padding-top: 1cm;
+}
+
+/* 내역 - 테이블 내역 모두 출력 */
+.page_record .print_contents {
+	min-height: 470px;
+}
+
+/*SEMS 이수증
+.page_semscerti .print_title {
+	margin-bottom: 30px; padding-top: 1.2cm;
+	min-height: 160px;
+}
+.page_semscerti .print_title h1 {
+	padding-top: 0;
+}
+.page_semscerti .print_contents {
+	min-height: 620px;
+}
+.page_semscerti .print_profile {
+	margin-left: 0;
+}
+.tbl_profile {
+	margin-bottom: 80px;
+}*/
+
+/* 포트폴리오 */
+.page .resume_container {
+	padding: 15px;
+}
+.page .resume_container h5 {
+	margin-bottom: 0;
+	padding-left: 20px;
+	font-size: 1.5rem;
+	background-position: left 12px;
+	background-size: 13px;
+}
+.page .studentinfo_box {
+	padding: 20px;
+}
+.page .studentinfo_box .info_detail {
+	margin-bottom: 35px;
+	padding-left: 0;
+}
+.page .studentinfo_box .info_detail .resumeimg {
+	position: relative;
+	margin: 0 auto 10px;
+}
+.page .myplan_list > h5 {
+	line-height: 30px; font-size: 1.4rem;
+}
+.page .myplan_list ul {
+	min-height: auto;
+}
+.page .myplan_list li {
+	font-size: 1.4rem;
+}
+.page .studentinfo_box .tbl_row {
+	padding-right: 0;
+}
+.page .studentinfo_box .tbl_row .tit {
+	margin-bottom: 10px;
+	text-align: center; font-size: 1.8rem;
+}
+.page .studentinfo_box .tbl_row tbody th, .page .studentinfo_box .tbl_row tbody td {
+	padding: 4px 0;
+	font-size: 1.3rem; word-break: break-all; letter-spacing: -0.06em;
+}
+.page .tbl table thead th, .page .tbl table thead td, .page .tbl table tbody th, .page .tbl table tbody td, .page .tbl table tfoot th, .page .tbl table tfoot td {
+	font-size: 1.3rem;
+}
+.page .selfintro_container .resume_cnt article {
+	padding: 15px;
+}
+.page .selfintro_container .resume_cnt article strong {
+	margin-bottom: 0;
+	font-size: 1.5rem;
+}
+.page .selfintro_container .resume_cnt article p {
+	font-size: 1.4rem;
+}
+/*==================== hover ====================*/
+@media screen and (min-width:1025px) {
+
+	/* layout hover */
+	.print_banner .btn_print:hover {
+		background-color: #043059;
+		cursor: pointer;
+	}
+
+}
+/*==================== hover ====================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

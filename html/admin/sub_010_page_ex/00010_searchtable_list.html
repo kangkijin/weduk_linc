@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi shrink-to-fit=no">
+		<meta name="format-detection" content="telephone=no, address=no">
+		<meta name="title" content="위덕대학교 LINC3.0">
+		<meta name="description" content="위덕대학교 LINC3.0">
+		<meta name="copyright" content="위덕대학교 LINC3.0">
+		<meta name="keywords" content="위덕대학교 LINC3.0">
+		<title>위덕대학교 LINC3.0</title>
+		
+		<!-- favicon -->
+		<link rel="apple-touch-icon" href="../../../images/favicon.png">
+		<link rel="shortcut icon" href="../../../images/favicon.ico">
+		<!-- //favicon -->
+		
+		<!-- [pp] icon -->
+		<link rel="stylesheet" href="../../../src/font-awesome/css/font-awesome.min.css">
+		<!-- [pp] font-awesome 파이어폭스 미출력 에러 대응 -->
+		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+		<!-- [pp] //font-awesome 파이어폭스 미출력 에러 대응 -->
+		<link rel="stylesheet" href="../../../src/remixicon/fonts/remixicon.css">
+		<!-- [pp] //icon -->
+		
+		<!-- css -->
+		<link rel="stylesheet" href="../../../src/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../../../src/bootstrap-adminLTE/css/AdminLTE.css">
+		<link rel="stylesheet" href="../../../src/bootstrap-adminLTE/css/_all-skins.min.css">
+		<link rel="stylesheet" href="../../../src/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
+		<link rel="stylesheet" href="../../../src/dataTables/css/dataTables.bootstrap.min.css">
+		<link rel="stylesheet" href="../../../src/dataTables/css/select.dataTables.min.css">
+		<link rel="stylesheet" href="../../../src/mCustomScrollbar/css/jquery.mCustomScrollbar.min.css">
+		<link rel="stylesheet" href="../../../src/select2/css/select2.css">
+		<link rel="stylesheet" href="../../../src/apexchart/css/apexcharts.css">
+		<link rel="stylesheet" href="../../../css/dl_global.css">
+		<link rel="stylesheet" href="../../../css/admin/dl_common.css">
+		<link rel="stylesheet" href="../../../css/admin/dl_custom.css">
+		<link rel="stylesheet" href="../../../css/admin/dl_table.css">
+		<link rel="stylesheet" href="../../../css/admin/dl_ui.css">
+		<link rel="stylesheet" href="../../../css/admin/dl_popup.css">
+		<!-- //css -->
+
+		<!-- js -->
+		<script src="../../../src/jquery/js/jquery-3.5.1.min.js"></script>
+		<!--[if lt IE 9]>
+		<script src="../../../src/jquery/js/jquery-1.12.3.min.js"></script>
+		<script src="../../../src/jquery/js/html5shiv.js"></script>
+		<script src="../../../src/jquery/js/IE9.js"></script>
+		<script src="../../../src/jquery/js/respond.min.js"></script>
+		<![endif]-->
+		<script src="../../../src/bootstrap/js/bootstrap.min.js"></script>
+		<script src="../../../src/bootstrap-adminLTE/js/adminlte.js"></script>
+		<script src="../../../src/bootstrap-adminLTE/js/demo.js"></script>
+		<script src="../../../src/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+		<script src="../../../src/dataTables/js/jquery.dataTables.min.js"></script>
+		<script src="../../../src/dataTables/js/dataTables.bootstrap.min.js"></script>
+		<script src="../../../src/dataTables/js/dataTables.buttons.min.js"></script>
+		<script src="../../../src/dataTables/js/dataTables.select.min.js"></script>
+		<script src="../../../src/dataTables/js/jszip.min.js"></script>
+		<script src="../../../src/dataTables/js/pdfmake.min.js"></script>
+		<script src="../../../src/mCustomScrollbar/js/jquery.mCustomScrollbar.min.js"></script>
+		<script src="../../../src/select2/js/select2.min.js"></script>
+		<script src="../../../src/apexchart/js/apexcharts.js"></script>
+		<script src="../../../js/admin/pp_ui.js"></script>
+		<!-- //js -->
+	</head>
+
+	<body class="hold-transition sidebar-mini">
+
+		<!--[pp] ie 하위버젼 접속시 알림 -->
+		<div id="browser_alert">
+			본 사이트는 익스플로러11 이상, 크롬, 오페라, 파이어폭스 브라우저등의 최신버전에 최적화 되어 있습니다.<br/>지금 사용하고 계시는 브라우저는 곧 지원이 중단되므로
+			<a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank">익스플로러 최신버젼</a>으로 업그레이드하시거나 <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank">크롬</a>, <a href="http://www.opera.com/ko/computer" target="_blank" style="color:#f9c461;">오페라</a>, <a href="https://www.mozilla.org/en-US/firefox/new/?scene=2" target="_blank">파이어폭스</a>등의 최신 브라우저를 이용해 주세요.
+			<button type="button" class="browser_alert_close">닫기</button>
+		</div>
+		<!--[pp] // ie 하위버젼 접속시 알림 -->
+
+		<!--[if lt IE 9]>
+		<script src="../../js/html5shiv.js"></script>
+		<script src="../../js/IE9.js"></script>
+		<script src="../../js/respond.min.js"></script>
+		<![endif]-->
+
+		<!-- [pp] 로딩중 -->
+		<div id="loading">
+			<p id="loading_image">
+				<img src="../../../images/loading.gif" alt="Loading..."/><br/>
+				<span>Loading</span>
+			</p>
+		</div>
+		<!-- [pp] //로딩중 -->
+
+		<div class="wrapper">
+			<!--[pp] header -->
+			<header class="main-header">
+				<!--[pp] logo -->
+				<h1>
+					<a href="javascript:void(0);" class="logo">
+						<!--[pp] 기본 로고 -->
+						<span class="logo-lg">
+							<img src="../../../images/admin/header_logo.svg" alt="한양대학교 ERICA 관리자페이지">
+						</span>
+						<!--[pp] //기본 로고 -->
+						<!--[pp] 메뉴 접힌 상태에서 보여줄 로고 -->
+						<span class="logo-mini">
+							<img src="../../../images/admin/minilogo.png" alt="한양대학교 ERICA 관리자페이지">
+						</span>
+						<!--[pp] //메뉴 접힌 상태에서 보여줄 로고 -->
+					</a>
+				</h1>
+				<!--[pp] //logo -->
+				<nav class="navbar navbar-static-top">
+					<!--[pp] 햄버거버튼 -->
+					<a href="javascript:void(0);" class="sidebar-toggle" data-toggle="push-menu" role="button">
+						<span class="sr-only">주요메뉴 열고닫기</span>
+					</a>
+					<!--[pp] //햄버거버튼 -->
+					<!--[pp] tnb -->
+					<div class="navbar-custom-menu">
+						<ul class="nav navbar-nav">
+							<li class="hidden-xs pp_username">
+								<a href="javascript:void(0);">
+									<i class="fa fa-user"></i>
+									<span class="pp_user_txt">최고관리자님</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="pp_client_link">
+									<i class="fa fa-user-times"></i>
+									<span class="hidden-xs pp_user_txt">신분삭제</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="pp_client_link">
+									<i class="fa fa-television"></i>
+									<span class="hidden-xs pp_user_txt">학생화면 바로가기</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);">
+									<i class="fa fa-unlock-alt"></i>
+									<span class="hidden-xs pp_user_txt">LOGOUT</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--[pp] //tnb -->
+				</nav>
+			</header>
+			<!--[pp] //header -->
+			<!--[pp] gnb -->
+			<aside class="main-sidebar">
+				<section class="sidebar">
+					<div class="user-panel">
+						<div class="pull-left image">
+							<img src="../../../images/admin/user_img.png" class="img-circle" alt="User Image">
+						</div>
+						<div class="pull-left info">
+							<p>최고 관리자님</p>
+							<span>
+								<i class="fa fa-calendar"></i>&nbsp;최종접속일: 19-01-01
+							</span>
+						</div>
+					</div>
+					<ul class="sidebar-menu" data-widget="tree">
+						<li class="treeview">
+							<a href="javascript:void(0);">
+								<i class="ri-settings-3-line"></i>포탈 관리
+							</a>
+							<ul class="treeview-menu">
+								<li><a href="javascript:void(0);">메뉴 관리</a></li>
+								<li><a href="javascript:void(0);">콘텐츠 관리</a></li>
+							</ul>
+						</li>
+						<li class="treeview">
+							<a href="javascript:void(0);">
+								<i class="ri-window-line"></i>사이트 관리
+							</a>
+							<ul class="treeview-menu">
+								<li><a href="javascript:void(0);">권한 관리</a></li>
+								<li><a href="javascript:void(0);">사용자별 권한 관리</a></li>
+								<li><a href="javascript:void(0);">외부 사용자 등록</a></li>
+								<li><a href="javascript:void(0);">로그인 이력</a></li>
+							</ul>
+						</li>
+						<li class="treeview">
+							<a href="javascript:void(0);">
+								<i class="ri-contacts-book-line"></i>교육연구단(팀) 소개 관리
+							</a>
+							<ul class="treeview-menu">
+								<li class="treeview">
+									<a href="javascript:void(0);">BK21 교육연구단(팀) 소개 관리</a>
+								</li>
+								<li class="treeview">
+									<a href="javascript:void(0);">게시판</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview">
+							<a href="javascript:void(0);">
+								<i class="ri-calendar-event-line"></i>학업활동관리
+							</a>
+							<ul class="treeview-menu">
+								<li class="treeview">
+									<a href="javascript:void(0);">
+										교과목 이수체계도 관리
+									</a>
+								</li>
+								<li class="treeview">
+									<a href="javascript:void(0);">
+										교과관리
+									</a>
+								</li>
+								<li class="treeview">
+									<a href="javascript:void(0);">
+										교과목 이수현황
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview">
+							<a href="javascript:void(0);">
+								<i class="ri-edit-line"></i>BK21 교육프로그램 관리
+							</a>
+							<ul class="treeview-menu">
+								<li>
+									<a href="javascript:void(0);">프로그램 등록</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">프로그램 운영현황</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">프로그램 결과보고서</a>
+								</li>
+								<li>
+									<a href="javascript:void(0);">프로그램 CQI</a>
+								</li>
+							</ul>
+						</li>
+						<li class="treeview">
+							<a href="javascript:void(0);">
+								<i class="ri-draft-line"></i>마이크로 전공 신청 관리
+							</a>
+						</li>
+						<li class="treeview">
+							<a href="javascript:void(0);">
+								<i class="ri-team-line"></i>커뮤니티 관리
+							</a>
+							<ul class="treeview-menu">
+								<li><a href="javascript:void(0);">공지사항 관리</a></li>
+								<li><a href="javascript:void(0);">Q&amp;A 관리</a></li>
+								<li><a href="javascript:void(0);">FAQ 관리</a></li>
+								<li><a href="javascript:void(0);">자료실 관리</a></li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</aside>
+			<!--[pp] //gnb -->
+
+		<!--[pp] 본문영역 -->
+			<div class="content-wrapper">
+				<!--[pp] 본문 타이틀 영역/페이지제목,페이지네비게이션 -->
+				<section class="content-header">
+					<h2>기본 리스트 화면</h2>
+					<ol class="breadcrumb">
+						<li><a href="#"><i class="fa fa-home"></i>home</a></li>
+						<li class="active">기본 리스트 화면</li>
+					</ol>
+				</section>
+				<!--[pp] //본문 타이틀 영역/페이지제목,페이지네비게이션 -->
+				<!--[pp] 본문내용영역 -->
+				<section class="content container-fluid">
+					<div class="box box-solid">
+						<div class="box-header">
+							<h3 class="box-title">프로그램 검색</h3>
+						</div>
+						<div class="box-body">
+							<!--[pp] 검색 -->
+							<table class="table table-bordered tbl_row tbl_fixed">
+								<caption>검색 조건 설정</caption>
+								<colgroup>
+									<col style="width: 20%">
+									<col style="width: 30%">
+									<col style="width: 20%">
+									<col style="width: 30%">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">input</th>
+										<td class="td_input">
+											<input type="text" class="form-control input-sm" placeholder="입력하세요." title="입력하세요.">
+										</td>
+										<th scope="row">select</th>
+										<td class="td_input">
+											<select class="form-control input-sm">
+												<option>선택하세요</option>
+											</select>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">date</th>
+										<td colspan="3" class="td_input">
+											<div class="dp_inline wd_125 va_m">
+												<div class="input-group date">
+													<div class="input-group-addon">
+														<i class="fa fa-calendar"></i>
+													</div>
+													<input type="text" name="datepicker" placeholder="시작일" class="form-control pull-right input-sm">
+												</div>
+											</div>
+											~
+											<div class="dp_inline wd_125 va_m">
+												<div class="input-group date">
+													<div class="input-group-addon">
+														<i class="fa fa-calendar"></i>
+													</div>
+													<input type="text" name="datepicker" placeholder="종료일" class="form-control pull-right input-sm">
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">checkbox / radio</th>
+										<td colspan="3" class="td_input">
+											<p class="ad_input_row">
+												<input type="checkbox" class="check" id="check_all">
+												<label class="check_label" for="check_all">check_default</label>
+											</p>
+											<p class="ad_input_row">
+												<input type="radio" name="radio" class="radio" id="radio1">
+												<label class="radio_label" for="radio1">radio_default1</label>
+											</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="mg_t5 ta_r">
+								<button type="button" class="btn btn-sm btn-outline-danger"><i class="fa fa-refresh mg_r5"></i>초기화</button>
+								<button type="button" class="btn btn-sm btn-primary"><i class="fa fa-search mg_r5"></i>검색</button>
+							</div>
+							<!--[pp] //검색 -->
+							<!--[pp] 검색결과 -->
+							<div class="ad_section_top">
+								<div class="ad_tbl_top">
+									<ul class="ad_tbl_count">
+										<li><span>Total:</span>10</li>
+									</ul>
+									<div class="ad_tbl_toplist">
+										<button type="button" class="btn btn-outline-success btn-sm va_t"><i class="fa fa-download"></i>엑셀다운로드</button>
+									</div>
+								</div>
+								<div class="table-responsive tbl_scroll_sm">
+									<table class="table table-bordered table-hover tbl_col tbl_fixed">
+										<caption>검색결과 목록</caption>
+										<colgroup>
+											<col style="width: 5%">
+											<col style="width: auto">
+											<col style="width: 10%">
+											<col style="width: 8%">
+											<col style="width: 200px">
+										</colgroup>
+										<thead>
+											<tr>
+												<th scope="col" class="td_input">
+													<p class="ad_input_row">
+														<input type="checkbox" class="check" id="check_default">
+														<label class="check_label ta_i" for="check_default">전체선택</label>
+													</p>
+												</th>
+												<th scope="col">진단문항명</th>
+												<th scope="col">사용어부</th>
+												<th scope="col">문항 수</th>
+												<th scope="col">관리</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td colspan="5">게시물이 없습니다.</td>
+											</tr>
+											<tr>
+												<th scope="row" class="td_input">
+													<p class="ad_input_row">
+														<input type="checkbox" class="check" id="check1">
+														<label class="check_label ta_i" for="check1">선택</label>
+													</p>
+												</th>
+												<td class="ta_l"><a href="javascript:void(0);" class="ellipsis">창의학습오름공동체 사전조사</a></td>
+												<td>미사용</td>
+												<td>45</td>
+												<td class="td_input">
+													<button type="button" class="btn btn-xs btn-primary"><i class="fa  fa-search-plus mg_r5"></i>상세보기</button>
+													<button class="btn btn-xs btn-primary" type="button"><i class="fa fa-edit mg_r5"></i>수정</button>
+													<button class="btn btn-xs btn-outline-danger" type="button"><i class="fa fa-trash-o mg_r5"></i>삭제</button>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="td_input">
+													<p class="ad_input_row">
+														<input type="checkbox" class="check" id="check2">
+														<label class="check_label ta_i" for="check2">선택</label>
+													</p>
+												</th>
+												<td class="ta_l"><a href="javascript:void(0);" class="ellipsis">창의학습오름공동체 사전조사</a></td>
+												<td>미사용</td>
+												<td>45</td>
+												<td class="td_input">
+													<button type="button" class="btn btn-xs btn-primary"><i class="fa  fa-search-plus mg_r5"></i>상세보기</button>
+													<button class="btn btn-xs btn-primary" type="button"><i class="fa fa-edit mg_r5"></i>수정</button>
+													<button class="btn btn-xs btn-outline-danger" type="button"><i class="fa fa-trash-o mg_r5"></i>삭제</button>
+												</td>
+											</tr>
+											<tr>
+												<th scope="row" class="td_input">
+													<p class="ad_input_row">
+														<input type="checkbox" class="check" id="check3">
+														<label class="check_label ta_i" for="check3">선택</label>
+													</p>
+												</th>
+												<td class="ta_l"><a href="javascript:void(0);" class="ellipsis">창의학습오름공동체 사전조사</a></td>
+												<td>미사용</td>
+												<td>45</td>
+												<td class="td_input">
+													<button type="button" class="btn btn-xs btn-primary"><i class="fa  fa-search-plus mg_r5"></i>상세보기</button>
+													<button class="btn btn-xs btn-primary" type="button"><i class="fa fa-edit mg_r5"></i>수정</button>
+													<button class="btn btn-xs btn-outline-danger" type="button"><i class="fa fa-trash-o mg_r5"></i>삭제</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="dataTables_paginate paging_simple_numbers ta_c">
+									<ul class="pagination">
+										<li class="paginate_button first disabled"><a href="javascript:void(0);" title="첫페이지 목록"><i class="fa fa-angle-double-left"></i></a></li>
+										<li class="paginate_button previous disabled"><a href="javascript:void(0);" title="이전목록"><i class="fa fa-angle-left"></i></a></li>
+										<li class="paginate_button active"><a href="javascript:void(0);">1</a></li>
+										<li class="paginate_button"><a href="javascript:void(0);">2</a></li>
+										<li class="paginate_button"><a href="javascript:void(0);">3</a></li>
+										<li class="paginate_button"><a href="javascript:void(0);">4</a></li>
+										<li class="paginate_button"><a href="javascript:void(0);">5</a></li>
+										<li class="paginate_button next"><a href="javascript:void(0);" title="다음목록"><i class="fa fa-angle-right"></i></a></li>
+										<li class="paginate_button last"><a href="javascript:void(0);" title="마지막페이지 목록"><i class="fa fa-angle-double-right"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<!--[pp] //검색결과 -->
+						</div>
+					</div>
+				</section>
+				<!--[pp] //본문내용영역 -->
+			</div>
+			<!--[pp] //본문영역 -->
+			<!--[pp] footer -->
+			<footer class="main-footer">
+				<strong>&copy; 2021 <a href="javascript:void(0);" target="_blank">BY HANYANG UNIVERSITY</a>.</strong> ALL RIGHTS RESERVED.
+				<a id="back-to-top" href="javascript:void(0);" class="btn btn-default btn-sm back-to-top" role="button" title="페이지 상단으로 이동" data-toggle="tooltip" data-placement="left">
+					<span class="glyphicon glyphicon-chevron-up"></span>
+				</a>
+			</footer>
+			<!--[pp] //footer -->
+		</div>
+	</body>
+
+</html>

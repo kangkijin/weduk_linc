@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi shrink-to-fit=no">
+		<meta name="format-detection" content="telephone=no, address=no">
+		<meta name="title" content="위덕대학교 LINC3.0">
+		<meta name="description" content="위덕대학교 LINC3.0">
+		<meta name="copyright" content="위덕대학교 LINC3.0">
+		<meta name="keywords" content="위덕대학교 LINC3.0">
+		<title>위덕대학교 LINC3.0</title>
+
+		<!-- [pp] favicon -->
+		<link rel="apple-touch-icon" href="../../../images/favicon.png">
+		<link rel="shortcut icon" href="../../../images/favicon.ico">
+		<!-- [pp] //favicon -->
+
+		<!-- [pp] css -->
+		<link rel="stylesheet" href="../../../src/magnetic-popup/css/magnific-popup.css">
+		<link rel="stylesheet" href="../../../src/mCustomScrollbar/css/jquery.mCustomScrollbar.min.css">
+		<link rel="stylesheet" href="../../../src/select2/css/select2.css">
+		<link rel="stylesheet" href="../../../src/apexchart/css/apexcharts.css">
+		<link rel="stylesheet" href="../../../css/dl_global.css">
+		<link rel="stylesheet" href="../../../css/client/normalize.css">
+		<link rel="stylesheet" href="../../../css/client/grid.css">
+		<link rel="stylesheet" href="../../../css/client/formstyle.css">
+		<link rel="stylesheet" href="../../../css/client/table.css">
+		<link rel="stylesheet" href="../../../css/client/common_ui.css">
+		<link rel="stylesheet" href="../../../css/client/ui.css">
+		<link rel="stylesheet" href="../../../css/client/popup.css">
+		<!-- [pp] //css -->
+
+		<!--[pp] js -->
+		<script src="../../../src/jquery/js/jquery-3.5.1.min.js"></script>
+		<!-- [if lt IE 9]>
+		<script src="../../../src/jquery/js/jquery-1.12.3.min.js"></script>
+		<script src="../../../src/jquery/js/html5shiv.js"></script>
+		<script src="../../../src/jquery/js/IE9.js"></script>
+		<script src="../../../src/jquery/js/respond.min.js"></script>
+		<![endif]-->
+		<script src="../../../src/magnetic-popup/js/jquery.magnific-popup.js"></script>
+		<script src="../../../src/mCustomScrollbar/js/jquery.mCustomScrollbar.min.js"></script>
+		<script src="../../../src/select2/js/select2.min.js"></script>
+		<script src="../../../src/apexchart/js/apexcharts.js"></script>
+		<script src="../../../js/client/pp_common.js"></script>
+		<!--[pp] //js -->
+	</head>
+	<body>
+		<!--[pp] ie 하위버젼 접속시 알림 -->
+		<div id="browseralert">
+			본 사이트는 익스플로러11 이상, 크롬, 오페라, 파이어폭스 브라우저등의 최신버전에 최적화 되어 있습니다.<br/>지금 사용하고 계시는 브라우저는 곧 지원이 중단되므로
+			<a href="http://windows.microsoft.com/ko-kr/internet-explorer/ie-11-worldwide-languages" target="_blank">익스플로러 최신버젼</a>으로 업그레이드하시거나 <a href="https://www.google.com/intl/ko/chrome/browser/" target="_blank">크롬</a>, <a href="http://www.opera.com/ko/computer" target="_blank" style="color:#f9c461;">오페라</a>, <a href="https://www.mozilla.org/en-US/firefox/new/?scene=2" target="_blank">파이어폭스</a>등의 최신 브라우저를 이용해 주세요.
+			<button type="button" class="browseralert_close">닫기</button>
+		</div>
+		<!--[pp] // ie 하위버젼 접속시 알림 -->
+
+		<!-- [pp] 로딩중 화면 -->
+		<div id="loading" style="display: none;">
+			<p id="loading_image">
+				<img src="../../../images/loading.gif" alt="Loading..."><br>
+				<span>Loading</span>
+			</p>
+		</div>
+		<!-- [pp] //로딩중 화면 -->
+
+		<!-- [pp] 푸터를 제외한 전체페이지 -->
+		<div class="page_wrap">
+
+			<!--[pp] skip nav -->
+			<nav class="skip_nav">
+				<a href="#gnb_skip">주요메뉴 바로가기</a>
+				<a href="#container_skip">본문영역 바로가기</a>
+			</nav>
+			<!--[pp] //skip nav -->
+
+			<!-- [pp] nav -->
+			<div class="nav_wrap">
+				<!-- [pp] header -->
+				<header class="header_wrap">
+					<div class="header_content">
+						<div class="grid_content">
+							<h1 class="header_logo">
+								<a href="javascript:void(0);">
+									<img src="../../../images/client/common/header_logo.png" alt="위덕대학교 LINC"/>
+								</a>
+							</h1>
+							<nav id="gnb_skip" class="gnb_wrap" tabindex="0">
+								<ul class="gnb_1depth">
+									<li>
+										<a href="javascript:void(0);">사업단 소개</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">산학협력 기업지원</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">학생지원</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">온라인 신청</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">커뮤니티</a>
+									</li> 
+								</ul>
+							</nav>
+							<a href="javascript:void(0);" class="btn_log btn_login btn_md btn_circle">LOGIN</a>
+							<!-- [pp] 로그인/로그아웃 :
+							<a href="javascript:void(0);" class="btn_log btn_login">LOGIN</a>
+							<a href="javascript:void(0);" class="btn_log btn_logout">LOGOUT</a>
+							-->
+							<button type="button" class="btn_menu">
+								메뉴보기
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+							<a href="javascript:void(0);" class="btn_admin">관리자페이지로 이동</a>
+						</div>
+					</div>
+					<div class="gnb_submenu">
+						<div class="grid_content">
+							<div class="gnb_list">
+								<a href="javascript:void(0);" class="gnb_tit">사업단 소개</a>
+								<ul class="gnb_2depth">
+									<li>
+										<a href="javascript:void(0);">인사말</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">사업소개</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">조직도</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">찾아오시는 길</a>
+									</li> 
+								</ul>
+							</div>
+							<div class="gnb_list">
+								<a href="javascript:void(0);" class="gnb_tit">산학협력 기업지원</a>
+								<ul class="gnb_2depth">
+									<li>
+										<a href="javascript:void(0);">ICC 소개</a>
+										<ul class="gnb_3depth">
+											<li>
+												<a href="javascript:void(0);">동해안미래에너지 ICC</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">해양레저관광 ICC</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">스마트푸드크리에이터 ICC</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">ULB ICC</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="javascript:void(0);">가족회사</a>
+										<ul class="gnb_3depth">
+											<li>
+												<a href="javascript:void(0);">가족회사 소개</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">가족회사 현황</a>
+											</li> 
+											<li>
+												<a href="javascript:void(0);">가족회사 신청</a>
+											</li> 
+										</ul>
+									</li>
+									<li>
+										<a href="javascript:void(0);">재직자교육 프로그램</a>
+										<ul class="gnb_3depth">
+											<li>
+												<a href="javascript:void(0);">재직자교육 프로그램 소개</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">재직자교육 프로그램 신청</a>
+											</li> 
+										</ul>
+									</li>
+									<li>
+										<a href="javascript:void(0);">애로기술지원</a>
+										<ul class="gnb_3depth">
+											<li>
+												<a href="javascript:void(0);">애로기술지원 소개</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">애로기술지원 신청</a>
+											</li> 
+										</ul>
+									</li>
+									<li>
+										<a href="javascript:void(0);">산학공동 기술개발</a>
+										<ul class="gnb_3depth">
+											<li>
+												<a href="javascript:void(0);">산학공동 기술개발 소개</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">산학공동 기술개발 신청</a>
+											</li> 
+										</ul>
+									</li>
+									<li>
+										<a href="javascript:void(0);">ALL-Set 기업지원</a>
+										<ul class="gnb_3depth">
+											<li>
+												<a href="javascript:void(0);">ALL-Set 기업지원 소개</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">ALL-Set 기업지원 신청</a>
+											</li> 
+										</ul>
+									</li>
+									<li>
+										<a href="javascript:void(0);">공용장비활용센터</a>
+										<ul class="gnb_3depth">
+											<li>
+												<a href="javascript:void(0);">장비소개</a>
+											</li> 
+											<li>
+												<a href="javascript:void(0);">장비대여</a>
+											</li> 
+											<li>
+												<a href="javascript:void(0);">나의 예약현황</a>
+											</li> 
+										</ul>
+									</li>
+									<li>
+										<a href="javascript:void(0);">위덕 산학신문고 2H<br/> (Hear & Help)</a>
+										<ul class="gnb_3depth">
+											<li>
+												<a href="javascript:void(0);">위덕산학신문고 소개</a>
+											</li> 
+											<li>
+												<a href="javascript:void(0);">위덕산학신문고 민원접수</a>
+											</li>  
+										</ul>
+									</li>
+								</ul>
+							</div>
+							<div class="gnb_list">
+								<a href="javascript:void(0);" class="gnb_tit">학생지원</a>
+								<ul class="gnb_2depth">
+									<li>
+										<a href="javascript:void(0);">캡스톤디자인</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">현장실습지원</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">2 in 1</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">비교과 프로그램</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">취·창업 프로그램</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">영상교재</a>
+									</li> 
+								</ul>
+							</div>
+							<div class="gnb_list">
+								<a href="javascript:void(0);" class="gnb_tit">온라인 신청</a>
+								<ul class="gnb_2depth">
+									<li>
+										<a href="javascript:void(0);">교육 및 행사</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">강의실 예약</a>
+										<ul class="gnb_3depth">
+											<li>
+												<a href="javascript:void(0);">강의실 대여</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">나의 예약현황</a>
+											</li> 
+										</ul>
+									</li>
+									<li>
+										<a href="javascript:void(0);">오픈랩(U&I) 예약</a>
+										<ul class="gnb_3depth">
+											<li>
+												<a href="javascript:void(0);">오픈랩(U&I) 대여</a>
+											</li>
+											<li>
+												<a href="javascript:void(0);">나의 예약현황</a>
+											</li> 
+										</ul>
+									</li> 
+								</ul>
+							</div>
+							<div class="gnb_list">
+								<a href="javascript:void(0);" class="gnb_tit">커뮤니티</a>
+								<ul class="gnb_2depth">
+									<li>
+										<a href="javascript:void(0);">공지사항</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">자료실</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">스케줄</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">뉴스&이벤트</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">Q&A</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- [pp] 검색 영역 -->
+					<div class="search_area">
+						<div class="grid_content">
+							<div class="unifiedsearch_input">
+								<input type="text" class="form_style" placeholder="검색어를 입력해주세요">
+								<button type="submit" class="btn_searchunified2">검색하기</button>
+							</div>
+							<button type="button" class="btn_searchclose">닫기</button>
+						</div>
+					</div>
+					<!-- [pp] //검색 영역 -->
+				</header>
+				<!-- [pp] //nav -->
+				<!-- [pp] lnb 영역 -->
+				<div class="lnb_wrap">
+					<div class="grid_content">
+						<nav class="lnb_list">
+							<a href="javascript:void(0);" class="btn_home">메인으로 가기</a>
+							<ul>
+								<li class="lnb_depth1">
+									<a href="javascript:void(0);">산학협력 기업지원</a>
+									<ul class="lnb_depth2">
+										<li>
+											<a href="javascript:void(0);">사업단 소개</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">산학협력 기업지원</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">학생지원</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">온라인 신청</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">커뮤니티</a>
+										</li>
+									</ul>
+								</li>
+								<li class="lnb_depth1">
+									<a href="javascript:void(0);">ICC소개</a>
+									<ul class="lnb_depth2">
+										<li>
+											<a href="javascript:void(0);">ICC소개</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">가족회사</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">재직자교육 프로그램</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">애로기술지원</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">산학공동 기술개발</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">ALL-Set 기업지원</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">공용장비활용센터</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">위덕 산학신문고 2H (Hear & Help )</a>
+										</li>
+									</ul>
+								</li>
+								<li class="lnb_depth1">
+									<a href="javascript:void(0);">동해안미래에너지 ICC</a>
+									<ul class="lnb_depth2">
+										<li>
+											<a href="javascript:void(0);">동해안미래에너지 ICC</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">해양레저관광 ICC</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">스마트푸드크리에이터 ICC</a>
+										</li>
+										<li>
+											<a href="javascript:void(0);">ULB ICC</a>
+										</li> 
+									</ul>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!-- [pp] //lnb 영역 -->
+			</div>
+			<!-- [pp] //header, lnb -->
+
+			<!-- [pp] subpage 컨텐츠영역 -->
+			<section id="container_skip" class="subcontent_wrap grid_content" tabindex="0">
+				<section class="section_toparea section_area">
+					<h3 class="section_tit_lg">동해안미래에너지 ICC (미래에너지융합전공)</h3>
+					<ul class="icc_list energy">
+						<li>신재생에너지<br/>공학과</li>
+						<li>IT융합학과</li>
+						<li>에너지전기<br/>공학부</li>
+						<li>지능형전력<br/>시스템공학과</li>
+					</ul>
+					<div class="icc_goal">
+						<ul class="icc_goallist">
+							<li>
+								융합 전공 관련 기술 개발 및 <br/>
+								인력 양성을 위한 산업체. <br/>
+								연구소 및 지자체와 협력 체계 구축
+							</li>
+							<li>
+								<strong>교육목표</strong>
+								4차산업혁명시대에 필요한 <br/>
+								미래에너지원의생산, 저장, 운용 및 <br/>
+								응용 현장에 적합한 준비된 인재 양성
+							</li>
+						</ul>
+					</div>
+				</section>
+			</section>
+			<!-- [pp] //subpage 컨텐츠영역 -->
+		</div>
+		<!-- [pp] //푸터를 제외한 전체페이지 -->
+
+		<!-- [pp] footer -->
+		<footer class="footer_wrap">
+			<div class="footer_top">
+				<div class="grid_content">
+					<p>경상북도 경주시 강동면 동해대로 261 [38004] / 안내전화: 054)760-1114 / E-mail: webmaster@uu.ac.kr</p>
+					<ul>
+						<li>
+							<a href="javascript:void(0);" class="medium">개인정보처리방침</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);">이메일무단수집거부</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer_bottom">
+				<div class="grid_content">
+					<p>Copyright 2023 Uiduk University All rights reserved.</p>
+				</div>
+			</div>
+			<a href="javascript:void(0);" class="move_top" title="페이지 상단으로 이동">
+				<svg width="70" height="70">
+					<circle class="path1" id="cir" cx="35" cy="35" r="34" stroke="#1f4575" stroke-width="3" fill="none">
+					</circle>
+				</svg>
+				<span class="blind percent"></span>
+			</a>
+		</footer>
+		<!-- [pp] //footer -->
+	</body>
+</html>
